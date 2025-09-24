@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: #222;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6f61;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #222;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;   /* Keeps it compact */
+  animation: fadeIn 1s ease-in-out;
+  box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+
+
+form label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+form input[type='number'], 
+form select {
+  width: 100%;      /* Fit inside */
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+
+form input[type='number']:focus, form select:focus {
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.6);
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%);
+}
+
+.output {
+  margin-top: 30px;
+  display: none;
+  animation: slideUp 0.8s ease;
+}
+
+.output table {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.output table th, .output table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.output table th {
+  background: #ff7eb3;
+  color: white;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  font-size: 14px;
+}
+form {
+  width: 100%;
+  max-width: 350px; /* Keeps form compact */
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  form {
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+input, select, textarea, button {
+  max-width: 100%;
+}
